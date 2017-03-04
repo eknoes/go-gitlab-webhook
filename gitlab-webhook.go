@@ -170,6 +170,7 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 	err = json.Unmarshal(data, &hook)
 	PanicIf(err, "while unmarshaling request")
 
+	log.Println("Got Webhook for " + hook.Project.Path_With_Namespace + ": " + hook.Object_Kind)
 	//find matching config for repository name
 	for _, repo := range config.Repositories {
 		if (repo.Name != hook.Project.Path_With_Namespace) {
