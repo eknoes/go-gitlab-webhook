@@ -134,7 +134,9 @@ func loadConfig(configFile string) Config {
 		PanicIf(err)
 	}()
 
-	buffer := make([]byte, 1024)
+	fi, err := file.Stat()
+
+	buffer := make([]byte, fi.Size())
 	count := 0
 
 	count, err = file.Read(buffer)

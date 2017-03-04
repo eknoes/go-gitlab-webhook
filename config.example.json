@@ -12,6 +12,69 @@
         {"stage": "build",
           "cmd": "print \"build\""}
       ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
+    },
+    {
+      "name": "gitlab-org/gitlab-test",
+      "commands": [
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
+      ]
     }
   ]
 }
