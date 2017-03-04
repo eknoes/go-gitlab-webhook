@@ -174,6 +174,8 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("Got Webhook for " + hook.Project.Path_With_Namespace + ": " + hook.Object_Kind)
 	//find matching config for repository name
+
+	var found = false
 	for _, repo := range config.Repositories {
 		if (repo.Name != hook.Project.Path_With_Namespace) {
 			continue
@@ -184,6 +186,7 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 
 			for _, build := range hook.Builds {
 				if (build.Status == "success" && build.Stage == cmd.Stage) {
+					found = true
 					var command = exec.Command(cmd.Cmd)
 					out, err := command.Output()
 					if (err != nil) {
@@ -196,5 +199,9 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 			}
 
 		}
+	}
+
+	if(!found) {
+		log.Println("Could not find sth to execute")
 	}
 }
