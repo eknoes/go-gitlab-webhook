@@ -5,16 +5,12 @@
   "secret": "secret",
   "repositories": [
     {
-      "name": "foo",
+      "name": "gitlab-org/gitlab-test",
       "commands": [
-        "/home/bar/deploy.sh",
-        "/home/bar/cleanup.sh"
-      ]
-    },
-    {
-      "name": "foobar",
-      "commands": [
-        "/usr/bin/true"
+        {"stage": "deploy",
+          "cmd": "print \"deploy\""},
+        {"stage": "build",
+          "cmd": "print \"build\""}
       ]
     }
   ]
