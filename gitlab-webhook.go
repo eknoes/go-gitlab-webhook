@@ -167,6 +167,7 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 	err = json.Unmarshal(data, &hook)
 	PanicIf(err, "while unmarshaling request")
 
+	log.Println("Got Request: " + hook.Object_kind + " Event for " + hook.Project.Name)
 	//find matching config for repository name
 	for _, repo := range config.Repositories {
 		if repo.Name != hook.Project.Path_with_namespace {
@@ -185,7 +186,6 @@ func hookHandler(w http.ResponseWriter, r *http.Request) {
 						log.Println("Executed: " + cmd.Cmd)
 						log.Println("Output: " + string(out))
 					}
-
 				}
 			}
 		}
