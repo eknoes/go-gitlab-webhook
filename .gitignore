@@ -53,3 +53,5 @@ Temporary Items
 /log.log
 /config.json
 /gitlab-webhook
+/test.json
+.idea/*
