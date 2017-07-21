@@ -5,17 +5,13 @@
   "secret": "secret",
   "repositories": [
     {
-      "name": "foo",
+      "name": "organisation/repository",
       "commands": [
-        "/home/bar/deploy.sh",
-        "/home/bar/cleanup.sh"
-      ]
-    },
-    {
-      "name": "foobar",
-      "commands": [
-        "/usr/bin/true"
+        {
+          "stage": "package",
+          "cmd": "./deploy.sh"
+        }
       ]
     }
-  ]
+    ]
 }
