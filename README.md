@@ -1,7 +1,7 @@
 go-gitlab-webhook
 =================
 
-A GitLab webhook receiver written in Go
+A GitLab webhook receiver written in Go, modified to listen for specific pipeline events
 
 ## Usage
 
